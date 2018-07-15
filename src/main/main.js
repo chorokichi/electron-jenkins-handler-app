@@ -10,7 +10,28 @@ function createWindow() {
     mainWindow = new BrowserWindow({ width: 800, height: 600 })
 
     // and load the index.html of the app.
-    mainWindow.loadFile('src/renderer/index.html')
+    let appName
+    for (var param of process.argv) {
+        if (param !== undefined) {
+            if (param.indexOf("--app=") != -1) {
+                appName = param.replace("--app=", "");
+            }
+        }
+    }
+
+    console.log("renderer appName: " + appName)
+    if (appName === undefined) {
+        console.error('lack argument(--app):');
+        console.error("process.argv[" + process.argv.length + "]: " + process.argv)
+        process.exit(1);
+    } else if (appName === "renderer-hello-world") {
+        mainWindow.loadFile('src/renderer-hello-world/index.html')
+    } else {
+        console.error('This app is not supporetd!!!');
+        process.exit(1);
+    }
+
+
 
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
