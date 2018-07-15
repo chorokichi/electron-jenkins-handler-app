@@ -1,0 +1,25 @@
+{
+  "name": "electron-jenkins-handler-app",
+  "version": "1.0.0",
+  "description": "To smoothly use Jenkins",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "mac": "npx electron-packager . JenkinsApp --platform=darwin --arch=x64 --overwrite --out=out",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chorokichi/electron-jenkins-handler-app.git"
+  },
+  "author": "kida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chorokichi/electron-jenkins-handler-app/issues"
+  },
+  "homepage": "https://github.com/chorokichi/electron-jenkins-handler-app#readme",
+  "devDependencies": {
+    "electron": "^2.0.5",
+    "electron-packager": "^12.1.0"
+  }
+}
