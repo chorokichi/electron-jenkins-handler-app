@@ -4,8 +4,9 @@
   "description": "To smoothly use Jenkins",
   "main": "src/main/main.js",
   "scripts": {
-    "start": "electron . --app=renderer-hello-world",
+    "start": "electron . --app=renderer-jenkins",
     "app1": "electron . --app=renderer-hello-world",
+    "app2": "electron . --app=renderer-jenkins",
     "mac": "npx electron-packager . JenkinsApp --platform=darwin --arch=x64 --overwrite --out=out",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

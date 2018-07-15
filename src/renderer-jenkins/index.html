@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jenkins</title>
+</head>
+
+<body>
+  <!-- <h1>Jenkins!</h1> -->
+
+  <style>
+    #content {
+      display: inline-flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+  <!-- https://imfly.gitbooks.io/electron-docs-gitbook/jp/api/web-view-tag.html -->
+  <div id="contentWrapper">
+    <webview id="content" src="http://localhost:8080" autosize="on"></webview>
+  </div>
+  <script>
+    // You can also require other files to run in this process 
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
