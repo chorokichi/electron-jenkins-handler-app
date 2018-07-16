@@ -28,6 +28,8 @@ function createWindow() {
         mainWindow.loadFile('src/renderer-hello-world/index.html')
     } else if (appName === "renderer-jenkins") {
         mainWindow.loadFile('src/renderer-jenkins/index.html')
+    } else if (appName === "renderer-split-view") {
+        mainWindow.loadFile('src/renderer-split-view/index.html')
     } else {
         console.error('This app is not supporetd!!!');
         process.exit(1);
